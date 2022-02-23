@@ -2,6 +2,7 @@ import './style.css'
 import * as home from "./home/home.js";
 import * as menu from  "./menu/menu.js";
 import * as about from  "./about/about.js";
+import flare from "./lens-flare.png";
 
 const navFactory =  (() =>{
     //create elements
@@ -13,6 +14,7 @@ const navFactory =  (() =>{
     const list = document.createElement('li');
     const logoText = document.createElement('span')
     const humberger = document.createElement('span');
+    const image = document.createElement('img');
     //append elements
     main.appendChild(home.getHome());
     logoText.textContent = "The Galdin Quay";
@@ -25,6 +27,7 @@ const navFactory =  (() =>{
     navContainer.classList.toggle('nav');
     list.classList.toggle('nav-list');
     logoText.classList.toggle('logo-text');
+
 
 
     //non DOM varaibles
@@ -61,6 +64,8 @@ const navFactory =  (() =>{
         for(let i=0; i<linkNames.length; i++){
             list.setAttribute('id',i);
             navLink.textContent =linkNames[i];
+            image.src=flare;
+            list.appendChild(image);
             list.appendChild(navLink);
             navContainer.appendChild(list.cloneNode(true));
            navContainer.children[i].addEventListener('click',function(e){
