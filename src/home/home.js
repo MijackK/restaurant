@@ -31,6 +31,7 @@ const constructHome = (() =>{
     const wrapper1 = document.createElement('div');
     const imageVisible = document.createElement('div');
     const imageInvisible = document.createElement('div');
+ 
 
     //add class
     Home.classList.toggle('Home');
@@ -63,7 +64,7 @@ const constructHome = (() =>{
     SecondSection.appendChild(logo);
     SecondSection.appendChild(title2);
     SecondSection.appendChild(subTitle2);
-    title2.textContent ='10 YEARS'
+    title2.textContent ='16 YEARS'
     Home.appendChild(ThirdSection);
     ThirdSection.appendChild(title3);
     ThirdSection.appendChild(paragraph1);
@@ -74,7 +75,7 @@ const constructHome = (() =>{
     subTitle2.textContent ='Final Fantasy XV is an action role-playing game developed and published by Square Enix. The fifteenth main installment of the Final Fantasy series';
     title3.textContent =' A First-Class Experience';
     paragraph1.textContent =`A Stunning seaside getaway along the Vannath Coast in southern Leide. Known not only for its world-class spa, but also for the exquisite seafood dishes crafted by Mother of Pearl's chef de cuisine, Coctura Arlund.`;
-    paragraph2.textContent=` With the sea right at our door we offer only the freshest sea food and if your feeling up to it we'll let you're own fish for a more hands on experience.`
+    paragraph2.textContent=` With the sea right at our door we offer only the freshest sea food and if your feeling up to it, we'll let you catch you're own fish doubling the experience`;
 
 
     
@@ -130,16 +131,17 @@ const constructHome = (() =>{
             let outOfBoundsBottom = visible.offsetTop + coord.height;
             let radius = dimensions.width/2;
             invisible.style.opacity=1;
+            console.log(`screenX${e.screenX}  clinetX${e.clientX} pageX:${e.pageX} `);
             //console.log(`imgX:${coord.x} ${coord.left}  imgY: ${coord.y} ${visible.offsetTop}  scrY:${e.screenY} pageY:${e.pageY} cliY:${e.clientY} `);
-            if( coord.left > e.screenX || e.screenX > outOfBoundsRight || e.pageY <outOfBoundsTop || e.pageY >outOfBoundsBottom){
+            if( coord.left > e.pageX || e.pageX > outOfBoundsRight || e.pageY <outOfBoundsTop || e.pageY >outOfBoundsBottom){
                 invisible.style.opacity =0;
                 return
             }
 
-            invisible.style.left = `${e.screenX - radius}px`;
+            invisible.style.left = `${e.pageX - radius}px`;
             invisible.style.top = `${ e.pageY -radius }px`;
-            //invisible.style.backgroundPosition = `${-1*(e.screenX -coord.x)+radius}px ${-1*(e.pageY - visible.offsetTop)+radius}px` //show without zoom effect, make sure both visible and invisible background size is the same.
-            invisible.style.backgroundPosition = `${-1*(e.screenX -coord.x)+radius -15}px ${-1*(e.pageY - visible.offsetTop)+radius -15}px` // invisible background size needs to be larger than visible background size, adjust till desired effect is achieved
+            //invisible.style.backgroundPosition = `${-1*(e.pageX -coord.x)+radius}px ${-1*(e.pageY - visible.offsetTop)+radius}px` //show without zoom effect, make sure both visible and invisible background size is the same.
+            invisible.style.backgroundPosition = `${-1*(e.pageX -coord.x)+radius -25}px ${-1*(e.pageY - visible.offsetTop)+radius -25}px` // invisible background size needs to be larger than visible background size, adjust till desired effect is achieved
         }
         visible.addEventListener('mousemove', e => moveGlass(e));
         visible.addEventListener('touchmove', e => moveGlass(e));

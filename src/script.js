@@ -15,6 +15,7 @@ const navFactory =  (() =>{
     const logoText = document.createElement('span')
     const humberger = document.createElement('span');
     const image = document.createElement('img');
+    const Footer = document.createElement('footer');
     //append elements
     main.appendChild(home.getHome());
     logoText.textContent = "The Galdin Quay";
@@ -22,7 +23,6 @@ const navFactory =  (() =>{
     humberger.innerHTML =`<i class="fas fa-bars"></i>`;
     Header.appendChild(humberger);
     // set attributes
-    navLink.setAttribute('href','');
     //add classes
     navContainer.classList.toggle('nav');
     list.classList.toggle('nav-list');
@@ -75,6 +75,7 @@ const navFactory =  (() =>{
          content.appendChild(navContainer);
         content.appendChild(Header);
         content.appendChild(main);
+        //content.appendChild(Footer);
         
     })();
 

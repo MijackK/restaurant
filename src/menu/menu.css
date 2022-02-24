@@ -1,0 +1,198 @@
+.menu-wrapper{
+    background:url('backdrop.png');
+    height: 90vh;
+    padding-top:100px;
+    background-size: cover;
+    color:var(--secondary-color);
+}
+.menu{
+   
+    display:grid;
+    width:89vw;
+    height:80%;
+    margin:auto;
+    grid-template-columns: 1.3fr 2fr;
+    gap:10px;
+}
+.selection{
+    display:grid;
+    grid-template: 20px 1fr / 1fr;
+    background-color: rgba(23, 34, 63,0.5);
+ 
+}
+.menu-items{
+    display: grid;
+    max-height: 66vh;
+    grid-template: 150px/ repeat(auto-fit,minmax(200px,1fr));
+    grid-auto-rows: 150px;
+    gap:5px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0,0.6) var(--secondary-background);
+    padding:5px;
+}
+.item>img{
+    width:100%;
+    height:100%;
+
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--secondary-background);
+    cursor: pointer;
+    transition: transform 0.2s linear;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.item:hover{
+    animation: blinking 1s  infinite;
+  
+  
+}
+.border{
+  display: none;
+  width:80%;
+  height:85%;
+  opacity:0.5;
+  background-image: url('border.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin:auto;
+
+}
+ .item:hover >.border{
+    display: block;
+    animation: pulse 1s  infinite;
+}
+.menu-title{
+    grid-area: 1/1/2/4;
+    text-align: center;
+    font-size:1.2rem;
+}
+.information{
+    display: grid;
+    grid-template: 1fr 0.4fr 1fr/1fr 1.5fr;
+   
+}
+.rating{
+    grid-area: 1/2/2/3;
+    width:200px;
+    height:200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: solid aquamarine;
+    border-bottom: solid aquamarine;
+    border-left: solid var(--secondary-background);
+    border-top: solid aquamarine;
+    border-radius:50%;
+    margin-left:auto;
+    border-width: 5px;
+    background-color: rgba(23, 34, 63,0.5);
+}
+.rating >i{
+    font-size:3.4rem;
+    font-weight: 0;
+    margin-top:20px;
+    margin-bottom:15px;
+
+}
+.rating >span{
+    text-align: center;
+    font-size: 1.3rem;
+    width:60%;
+}
+.rating >span:nth-child(2){
+    border-bottom: solid;
+    padding-bottom:10px;
+}
+.ingredients{
+    grid-area: 2/2/3/3;
+  
+}
+.food-display{
+    grid-area:3/1/4/3;
+    display:grid;
+    background-color: rgba(0, 0, 0, 0.7);
+    grid-template:  35px 1fr /1fr 2fr;
+    gap:5px;
+    padding:8px;
+   
+}
+.food-name{
+    grid-area: 1/1/2/3;
+    text-align: center;
+    background-color: rgba(129, 119, 101,0.2);
+    border-top: #817765 double;
+    border-bottom: #817765 double;
+    font-size:1.2rem;
+}
+.food-image{
+    grid-area: 2/1/3/2;
+    background-color:rgba(23, 34, 63,0.5);
+    background-size: 100% 100%;
+}
+.food-stats{
+    grid-area: 2/2/3/3;
+    background-color:rgba(23, 34, 63,0.5);
+    padding:5px;
+    overflow-y: scroll;
+    height: 223px;
+    scrollbar-width: thin;
+}
+.food-stats::-webkit-scrollbar-thumb {
+    width: 12px;
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid orange;
+}
+.effect{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(68, 81, 115, 0.55);
+    margin-bottom: 7px;
+}
+  
+.effect-title{
+    display: flex;
+    align-items: center;
+    color:aquamarine;
+    font-size:1.2rem;
+    border-bottom: white solid;
+    width:97%;
+    border-width: thin;
+    margin-left:auto;
+    margin-right:auto;
+    padding:4px;
+}
+.effect-title >img{
+    width:20px;
+    height:20px;
+    margin-right:5px;
+    
+}
+.effect-description{
+    width:97%;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+@keyframes blinking {
+    0%{filter: brightness(1);}
+    25%{filter: brightness(1.1);}
+    50%{filter: brightness(1.2);}
+    75%{filter: brightness(1.1);}
+    100%{filter: brightness(1);}
+}
+@keyframes pulse{
+    0%{transform: scale(1);}
+    25%{transform: scale(1.1);}
+    50%{transform: scale(1);}
+    75%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+ 
+}
