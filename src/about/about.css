@@ -1,0 +1,36 @@
+.location-map{
+    width:50vw;
+    height:70vh;
+    border-style: solid;
+    background-image: url('https://i.imgur.com/7reJCXf.jpeg');
+    background-repeat: no-repeat;
+    cursor:grab;
+    background-position: -3000px -2000px;
+}
+.p-about{
+    color:var(--secondary-background);
+    width:100%;
+    font-family: 'rubik', helvetica, arial, sans-serif,'Open Sans';
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+.about-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+    
+}
+.about{
+ 
+    width:30%;
+    padding:10px;
+    margin-right:30px;
+}
+.about-title{
+    display: inline-block;
+    width:100%;
+    font-family: var(--secondary-font);
+    font-size: 4rem;
+    text-align: center;
+}
