@@ -107,6 +107,7 @@
     height:576px;
     background-size: 50vw 576px;
     cursor: none;
+    background-repeat: no-repeat;
 }
 
 .img-invisible{
@@ -122,4 +123,76 @@
     background-position: 0px 0px;
     background-repeat: no-repeat;
     background-size: 52vw 623px;
+}
+
+@media only screen and (max-width: 810px) {
+    .first-section{
+        flex-direction: column;
+    }
+    .first-text{
+        width:100%;
+        margin-top:50px;
+    }
+    .moving-text{
+        margin-top: 50px;
+    }
+    .galdin-video{
+        width:100%;
+        margin-top:30px;
+    }
+    .third-section{
+        width: 100vw;
+    }
+    .img-visible{
+        background-size: 97vw 576px;
+        margin-left:5px;
+    }
+    .img-invisible{
+        background-size: 100vw 623px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .first-section{
+        flex-direction: column;
+    }
+    .first-text{
+        width:100%;
+        margin-top:50px;
+    }
+    .first-text >span:nth-child(1){
+        font-size:2rem;
+    }
+    .moving-text{
+        margin-top: 50px;
+        font-size: 2.4rem;
+    }
+    .galdin-video{
+        width:100%;
+        margin-top:30px;
+    }
+    .second-section >span:nth-child(2){
+        font-size:4rem;
+    }
+    .second-section >span:nth-child(3){
+       width: 90vw;
+       
+    }
+    .third-section{
+        width: 100vw;
+    }
+    .third-section >p{
+        width: 90vw;
+    }
+    .third-section >span{ 
+        font-size: 2.3rem;
+        text-align: center;
+    }
+    .img-visible{
+        background-size: 96vw 576px;
+        margin-left:5px;
+    }
+    .img-invisible{
+        background-size: 100vw 623px;
+    }
 }
