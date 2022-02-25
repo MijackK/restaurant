@@ -1,6 +1,6 @@
 .menu-wrapper{
     background:url('backdrop.png');
-    height: 90vh;
+    height: 81vh;
     padding-top:100px;
     background-size: cover;
     color:var(--secondary-color);
@@ -9,7 +9,7 @@
    
     display:grid;
     width:89vw;
-    height:80%;
+    height:75vh;
     margin:auto;
     grid-template-columns: 1.3fr 2fr;
     gap:10px;
@@ -216,7 +216,7 @@
 }
 @media only screen and (max-width: 600px){
     .menu{
-        grid-template: 300px 480px/ 1fr;
+        grid-template: 300px 1fr/ 1fr;
         width:98vw;
 
     }
@@ -237,12 +237,24 @@
         flex: 0 0 auto;
         width: 330px;
     }
-  
     .information{
         grid-area: 2/1/3/2;
-        
+        grid-template: 35px 1fr/1fr;
+        height:100%;
+    }
+    .food-image{
+        display: none;
+    }
+    .food-display{
+      grid-area:1/1/3/2;
+      grid-template: 35px 1fr /1fr 2fr;
+   
+    }
+    .food-stats{
+        grid-area: 2/1/3/3;
+        height:100%;
+     
        
     }
-  
-  
+
 }

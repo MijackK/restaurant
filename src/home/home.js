@@ -130,11 +130,11 @@ const constructHome = (() =>{
             let outOfBoundsTop =visible.offsetTop;
             let outOfBoundsBottom = visible.offsetTop + coord.height;
             let radius = dimensions.width/2;
-            invisible.style.opacity=1;
-            console.log(`screenX${e.screenX}  clinetX${e.clientX} pageX:${e.pageX} `);
+            invisible.style.display='block';
+            //console.log(`screenX${e.screenX}  clinetX${e.clientX} pageX:${e.pageX} `);
             //console.log(`imgX:${coord.x} ${coord.left}  imgY: ${coord.y} ${visible.offsetTop}  scrY:${e.screenY} pageY:${e.pageY} cliY:${e.clientY} `);
             if( coord.left > e.pageX || e.pageX > outOfBoundsRight || e.pageY <outOfBoundsTop || e.pageY >outOfBoundsBottom){
-                invisible.style.opacity =0;
+                invisible.style.display ='none';
                 return
             }
 

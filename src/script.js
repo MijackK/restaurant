@@ -75,7 +75,8 @@ const navFactory =  (() =>{
          content.appendChild(navContainer);
         content.appendChild(Header);
         content.appendChild(main);
-        //content.appendChild(Footer);
+        content.appendChild(Footer);
+        Footer.innerHTML =`<span> Create by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`;
         
     })();
 

@@ -83,6 +83,7 @@
    width:50vw;
    margin-left:auto;
    margin-right:auto;
+   margin-bottom:20px
 }
 .third-section >p{
     width:400px;
@@ -108,10 +109,11 @@
     background-size: 50vw 576px;
     cursor: none;
     background-repeat: no-repeat;
+
 }
 
 .img-invisible{
-   opacity:0;
+    display: none;
     position: absolute;
     width:250px;
     height:250px;
