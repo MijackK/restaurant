@@ -160,9 +160,9 @@ const constructHome = (() =>{
 })();
 
 const getHome = () =>{
-    constructHome.galdinVideo.src= localStorage.theme == 'light'?'https://gta5mod.net/wp-content/uploads/2020/06/Final-Fantasy-XV-Galdin-Quay.jpg':'https://i.ytimg.com/vi/FQcPlk5APAs/maxresdefault.jpg';
-    constructHome.imageInvisible.style.backgroundImage = localStorage.theme == 'light' ? `url('https://i.imgur.com/z3PX2uk.png')` :  `url('https://i.imgur.com/gkeuUxp.jpg')`;
-    constructHome.imageVisible.style.backgroundImage = localStorage.theme == 'light' ?`url('https://i.imgur.com/enudYqV.jpg')` :  `url('https://i.imgur.com/bnLWCgA.jpg')`;
+    constructHome.galdinVideo.src= localStorage.theme == 'dark'?'https://i.ytimg.com/vi/FQcPlk5APAs/maxresdefault.jpg':'https://gta5mod.net/wp-content/uploads/2020/06/Final-Fantasy-XV-Galdin-Quay.jpg';
+    constructHome.imageInvisible.style.backgroundImage = localStorage.theme == 'dark' ?  `url('https://i.imgur.com/gkeuUxp.jpg')` : `url('https://i.imgur.com/z3PX2uk.png')`;
+    constructHome.imageVisible.style.backgroundImage = localStorage.theme == 'dark' ?  `url('https://i.imgur.com/bnLWCgA.jpg')` : `url('https://i.imgur.com/enudYqV.jpg')`;
     return Home;
 }
 

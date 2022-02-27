@@ -5,6 +5,8 @@ import * as about from  "./about/about.js";
 import flare from "./lens-flare.png";
 
 const navFactory =  (() =>{
+    // get elements
+    const body = document.querySelector('body');
     //create elements
     const content = document.querySelector('.content');
     const main = document.createElement('main');
@@ -34,9 +36,9 @@ const navFactory =  (() =>{
     themeSlider.classList.toggle('theme');
     gitHub.classList.toggle('github');
      // styles
-    localStorage.theme == 'light' ? document.querySelector('body').setAttribute('class','light'):document.querySelector('body').setAttribute('class','dark');
-    themeSlider.style.flexDirection =localStorage.theme == 'light' ?  'row': 'row-reverse';
-    themeSlider.style.backgroundColor =localStorage.theme == 'light' ?  'rgb(168, 168, 127)': '#0997a3';
+    localStorage.theme == 'dark' ?body.setAttribute('class','dark') :body.setAttribute('class','light');
+    themeSlider.style.flexDirection =localStorage.theme == 'dark' ?   'row-reverse':'row';
+    themeSlider.style.backgroundColor =localStorage.theme == 'dark' ?  '#0997a3' : 'rgb(168, 168, 127)';
     //non DOM varaibles
     let currentlySelected;
     let closed = true;
