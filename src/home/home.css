@@ -141,13 +141,18 @@
     }
     .third-section{
         width: 100vw;
+        border-style: none;
+      
+    }
+    .wrapper1{
+        width:100%;
     }
     .img-visible{
-        background-size: 97vw 576px;
-        margin-left:5px;
+        background-size: 100vw 576px;
+      
     }
     .img-invisible{
-        background-size: 100vw 623px;
+        background-size: 103vw 623px;
     }
 }
 
