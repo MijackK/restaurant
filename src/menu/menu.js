@@ -1,19 +1,14 @@
 import './menu.css'
 
-import backdrop from './backdrop.png';
-import border from './border.png';
-import cake from './cake.PNG';
-import crab from './crab.PNG';
-import GaldinGratin from './GaldinGratin.PNG';
-import risotto from './risotto.PNG';
-import wfits from './wfits.PNG';
+//import backdrop from './backdrop.png';
+//import border from './border.png';
 import attack from './attack.PNG';
 import health from './health.PNG';
 import poison from './poison.PNG';
 import resist from './resist.PNG';
 import fresh from './fresh.PNG';
 import magic from './magic.PNG';
-import noodles from './noodles.PNG';
+//import noodles from './noodles.PNG';
 
 let menu;
 
@@ -93,32 +88,32 @@ const constructMenu = (() =>{
 
     let foods = [
         {name:'Galdin Gratin',
-        image:GaldinGratin,
+        image:'https://i.imgur.com/7OGxOpV.png',
         stats:[
             {effect:'Fresh',icon:effectIcons.fresh,text:'Boost all stats and increases EXP earned by 10%'},
             {effect:'HP Boost (Level 10)',icon:effectIcons.health,text:'Increases maximum HP by 500'},
         ]},
         {name:'White Fish in Tomato Sauce',
-        image:wfits,
+        image:'https://i.imgur.com/2YoRtOV.png',
         stats:[
             {effect:'Attack Boost (level 16)',icon:effectIcons.attack,text:'Increases attack  by 160'},
             {effect:'HP Boost (Level 18)',icon:effectIcons.health,text:'Increases maximum HP by 900'},
             {effect:'PoisonProof',icon:effectIcons.poison,text:'Prevents poison'},
         ]},
         {name:"Sea's Bounty Risotto",
-        image:risotto,
+        image:'https://i.imgur.com/o5lt5Am.png',
         stats:[
             {effect:'Attack Boost (level 12)',icon:effectIcons.attack,text:'Increases attack  by 120'},
             {effect:'HP Boost (Level 12)',icon:effectIcons.health,text:'Increases maximum HP by 600'},
             {effect:'Regen Boost (Level 1)',icon:effectIcons.health,text:'Accelarates HP recovery by 25%'},
         ]},
         {name:'Steamed Crab with Rock Salt',
-        image:crab,
+        image:'https://i.imgur.com/yXOHtCD.png',
         stats:[
             {effect:'Resistant',icon:effectIcons.resist,text:'Nulifies fire, ice, and lightning attacks'},
         ]},
         {name:'Tenebraen Berry Opera',
-        image:cake,
+        image:'https://i.imgur.com/jiFHrLV.png',
         stats:[
             {effect:'Magemaster',icon:effectIcons.magic,text:'Magic +500, Strength becomes 0'},
         ]},

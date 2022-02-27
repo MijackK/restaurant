@@ -15,24 +15,39 @@ const navFactory =  (() =>{
     const logoText = document.createElement('span')
     const humberger = document.createElement('span');
     const image = document.createElement('img');
-    const Footer = document.createElement('footer');
+    const themeSlider = document.createElement('div');
+    const gitHub = document.createElement('div');
     //append elements
     main.appendChild(home.getHome());
     logoText.textContent = "The Galdin Quay";
     Header.appendChild(logoText);
     humberger.innerHTML =`<i class="fas fa-bars"></i>`;
     Header.appendChild(humberger);
+    themeSlider.innerHTML = `<div class="theme-circle"></div>`;
+    gitHub.innerHTML =(`<span> Create by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`);
+
     // set attributes
     //add classes
     navContainer.classList.toggle('nav');
     list.classList.toggle('nav-list');
     logoText.classList.toggle('logo-text');
-
-
-
+    themeSlider.classList.toggle('theme');
+    gitHub.classList.toggle('github');
+     // styles
+    localStorage.theme == 'light' ? document.querySelector('body').setAttribute('class','light'):document.querySelector('body').setAttribute('class','dark');
+    themeSlider.style.flexDirection =localStorage.theme == 'light' ?  'row': 'row-reverse';
+    themeSlider.style.backgroundColor =localStorage.theme == 'light' ?  'rgb(168, 168, 127)': '#0997a3';
     //non DOM varaibles
     let currentlySelected;
     let closed = true;
+  
+
+
+    const createLocalStorage = (() =>{
+        if(localStorage.theme)
+        return
+        localStorage.setItem('theme','light');
+    })();
 
     const switcher = function(link){
         if(link.id == currentlySelected)
@@ -58,6 +73,7 @@ const navFactory =  (() =>{
         closed == true ? navContainer.style.display='flex':navContainer.style.display='none';
         closed =!closed;
     }
+    
 
     const createLink = (() =>{
         let linkNames =['Home','Menu','About'];
@@ -72,16 +88,43 @@ const navFactory =  (() =>{
                 e.preventDefault();
                 switcher(this); 
             })}
-         content.appendChild(navContainer);
+        navContainer.appendChild(themeSlider);
+        navContainer.appendChild(gitHub);
+        content.appendChild(navContainer);
         content.appendChild(Header);
         content.appendChild(main);
-        content.appendChild(Footer);
-        Footer.innerHTML =`<span> Create by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`;
+
+       
         
     })();
 
+    const themeHandler = () =>{
+        if(localStorage.theme){
+            if(localStorage.theme == 'light'){
+                themeSlider.style.flexDirection ='row';
+                themeSlider.style.backgroundColor='rgb(168, 168, 127)';
+                document.querySelector('body').setAttribute('class','light');
+                document.querySelector('.galdin-video').src='https://gta5mod.net/wp-content/uploads/2020/06/Final-Fantasy-XV-Galdin-Quay.jpg';
+                document.querySelector('.img-invisible').style.backgroundImage = `url('https://i.imgur.com/z3PX2uk.png')`;
+                document.querySelector('.img-visible').style.backgroundImage = `url('https://i.imgur.com/enudYqV.jpg')`;
+                return
+            }
+            themeSlider.style.flexDirection ='row-reverse';
+            themeSlider.style.backgroundColor='#0997a3';
+            document.querySelector('body').setAttribute('class','dark');
+            document.querySelector('.galdin-video').src='https://i.ytimg.com/vi/FQcPlk5APAs/maxresdefault.jpg';
+            document.querySelector('.img-invisible').style.backgroundImage = `url('https://i.imgur.com/gkeuUxp.jpg')`;
+            document.querySelector('.img-visible').style.backgroundImage = `url('https://i.imgur.com/bnLWCgA.jpg')`; 
+        }
+      
+    }
+
         //Event listeners
         humberger.addEventListener('click',closeMenu)
+        themeSlider.addEventListener('click', e =>{
+            localStorage.theme == 'light' ? localStorage.setItem('theme','dark') :  localStorage.setItem('theme','light');
+            themeHandler();
+        })
  
 })();
 

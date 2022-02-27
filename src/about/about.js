@@ -1,12 +1,12 @@
 import './about.css'
 
 const about = document.createElement('div');
-
 const aboutTitle = document.createElement('span');
 const aboutWrapper =document.createElement('div');
 const aboutContent =document.createElement('div');
 const lucisMap = document.createElement('div');
 const paragraph = document.createElement('p');
+const Footer = document.createElement('footer');
 
 
 //add class
@@ -15,8 +15,10 @@ aboutWrapper.classList.toggle('about-wrapper');
 aboutContent.classList.toggle('about');
 lucisMap.classList.toggle('location-map');
 paragraph.classList.toggle('p-about');
+about.classList.toggle('about-container');
 //append item
 aboutTitle.textContent = "Map of Lucis";
+Footer.innerHTML =`<span> Create by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`;
 
 
 
@@ -33,6 +35,7 @@ aboutWrapper.appendChild(aboutContent);
 aboutWrapper.appendChild(lucisMap);
 about.appendChild(aboutTitle);
 about.appendChild(aboutWrapper);
+about.appendChild(Footer);
 
 
 
