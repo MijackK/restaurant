@@ -65,11 +65,11 @@ const mapMovement = (() =>{
     map.addEventListener('mousemove', e =>{
         if(!shouldMove)
         return
-        offsetX = [0,1,2,3,4,5,-1,-2,-3,-4,-5].map(x => x+coordinates.x);// prevent movement from slight offsets
-        offsetY = [0,1,2,3,4,5,-1,-2,-3,-4,-5].map(y => y+coordinates.y);// prevent movement from slight offsets
+        offsetX = [0,1,2,3,-1,-2,-3].map(x => x+coordinates.x);// prevent movement from slight offsets
+        offsetY = [0,1,2,3,-1,-2,-3].map(y => y+coordinates.y);// prevent movement from slight offsets
        
-        movement.x = offsetX.includes(e.clientX) ? 0: e.clientX > coordinates.x ? 14:-14;
-        movement.y =  offsetY.includes(e.clientY) ? 0:e.clientY > coordinates.y ? 14:-14;
+        movement.x = offsetX.includes(e.clientX) ? 0: e.clientX > coordinates.x ? 16:-16;
+        movement.y =  offsetY.includes(e.clientY) ? 0:e.clientY > coordinates.y ? 16:-16;
         mapPosition.x = mapPosition.x + movement.x;
         mapPosition.y = mapPosition.y + movement.y;
        map.style.backgroundPosition = `${mapPosition.x}px ${mapPosition.y}px`;
