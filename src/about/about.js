@@ -18,7 +18,7 @@ paragraph.classList.toggle('p-about');
 about.classList.toggle('about-container');
 //append item
 aboutTitle.textContent = "Map of Lucis";
-Footer.innerHTML =`<span> Create by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`;
+Footer.innerHTML =`<span> Created by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`;
 
 
 

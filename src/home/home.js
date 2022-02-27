@@ -79,7 +79,7 @@ const constructHome = (() =>{
     paragraph1.textContent =`A Stunning seaside getaway along the Vannath Coast in southern Leide. Known not only for its world-class spa, but also for the exquisite seafood dishes crafted by Mother of Pearl's chef de cuisine, Coctura Arlund.`;
     paragraph2.textContent=` With the sea right at our door we offer only the freshest sea food and if your feeling up to it, we'll let you catch you're own fish doubling the experience`;
     Home.appendChild(Footer);
-    Footer.innerHTML =`<span> Create by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`;
+    Footer.innerHTML =`<span> Created by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`;
 
 
     
