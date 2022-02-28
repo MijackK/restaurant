@@ -153,7 +153,8 @@ const constructHome = (() =>{
         }
         visible.addEventListener('mousemove', e => moveGlass(e));
         visible.addEventListener('touchmove', e => {
-            moveGlass(e.changedTouches[0]);
+            e.preventDefault();
+             moveGlass(e.changedTouches[0]);
         });
     })();
 
