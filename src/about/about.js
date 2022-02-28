@@ -81,20 +81,25 @@ const mapMovement = (() =>{
         shouldMove=false;
         e.target.style.cursor = 'grab';
     })
-    map.addEventListener('mouseend', e =>{
-        shouldMove=false;
-        e.target.style.cursor = 'grab';
-    })
-
+  
     map.addEventListener('mousemove', e =>{
         startMovement(e);
       
     })
+
     map.addEventListener('touchmove', e =>{
         e.preventDefault();
         startMovement(e.changedTouches[0]);
-     
     })
+    map.addEventListener('touchstart', e =>{
+        shouldMove=true;
+        console.log('start');
+    })
+    map.addEventListener('touchend', e =>{
+        shouldMove=false;
+        console.log('end');
+    })
+   
 
 })();
 
