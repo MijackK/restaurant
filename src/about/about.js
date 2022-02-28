@@ -49,20 +49,7 @@ const mapMovement = (() =>{
     let movement ={x:0,y:0}// used to store where the map moves.
     let offsetX;
     let offsetY;
-  
-    map.addEventListener('mousedown', e =>{
-        shouldMove=true;
-        e.target.style.cursor = 'grabbing';
-        coordinates.x=e.clientX;
-        coordinates.y =e.clientY;
-    })
-
-    map.addEventListener('mouseup', e =>{
-        shouldMove=false;
-        e.target.style.cursor = 'grab';
-    })
-
-    map.addEventListener('mousemove', e =>{
+    const startMovement = (e) =>{
         if(!shouldMove)
         return
         offsetX = [0,1,2,3,-1,-2,-3].map(x => x+coordinates.x);// prevent movement from slight offsets
@@ -75,6 +62,38 @@ const mapMovement = (() =>{
        map.style.backgroundPosition = `${mapPosition.x}px ${mapPosition.y}px`;
        coordinates.x=e.clientX;
        coordinates.y =e.clientY;
+    }
+  
+    map.addEventListener('mousedown', e =>{
+        shouldMove=true;
+        e.target.style.cursor = 'grabbing';
+        coordinates.x=e.clientX;
+        coordinates.y =e.clientY;
+    })
+    map.addEventListener('touchstart', e =>{
+        shouldMove=true;
+        e.target.style.cursor = 'grabbing';
+        coordinates.x=e.clientX;
+        coordinates.y =e.clientY;
+    })
+
+    map.addEventListener('mouseup', e =>{
+        shouldMove=false;
+        e.target.style.cursor = 'grab';
+    })
+    map.addEventListener('mouseend', e =>{
+        shouldMove=false;
+        e.target.style.cursor = 'grab';
+    })
+
+    map.addEventListener('mousemove', e =>{
+        startMovement(e);
+      
+    })
+    map.addEventListener('touchmove', e =>{
+        e.preventDefault();
+        startMovement(e.changedTouches[0]);
+     
     })
 
 })();

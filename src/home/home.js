@@ -152,7 +152,10 @@ const constructHome = (() =>{
             invisible.style.backgroundPosition = `${-1*(e.pageX -coord.x)+radius -25}px ${-1*(e.pageY - visible.offsetTop)+radius -25}px` // invisible background size needs to be larger than visible background size, adjust till desired effect is achieved
         }
         visible.addEventListener('mousemove', e => moveGlass(e));
-        visible.addEventListener('touchmove', e => moveGlass(e));
+        visible.addEventListener('touchmove', e => {
+            e.preventDefault();
+            moveGlass(e.changedTouches[0]);
+        });
     })();
 
     return {galdinVideo,imageInvisible,imageVisible}
