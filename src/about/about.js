@@ -70,12 +70,6 @@ const mapMovement = (() =>{
         coordinates.x=e.clientX;
         coordinates.y =e.clientY;
     })
-    map.addEventListener('touchstart', e =>{
-        shouldMove=true;
-        e.target.style.cursor = 'grabbing';
-        coordinates.x=e.clientX;
-        coordinates.y =e.clientY;
-    })
 
     map.addEventListener('mouseup', e =>{
         shouldMove=false;
@@ -86,7 +80,7 @@ const mapMovement = (() =>{
         startMovement(e);
       
     })
-
+/** 
     map.addEventListener('touchmove', e =>{
         e.preventDefault();
         startMovement(e.changedTouches[0]);
@@ -99,6 +93,7 @@ const mapMovement = (() =>{
         shouldMove=false;
         console.log('end');
     })
+    */
    
 
 })();
