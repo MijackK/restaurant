@@ -18,6 +18,7 @@ body{
     --secondary-background:rgb(23, 34, 63,0.75);
     --primary-font:'Galliard', serif, monospace;
     --secondary-font: 'Monaco',monospace;
+    width:100vw;
     overflow-x:hidden ;
     
 }
