@@ -80,11 +80,12 @@ const mapMovement = (() =>{
         startMovement(e);
       
     })
-/** 
+
     map.addEventListener('touchmove', e =>{
         e.preventDefault();
         startMovement(e.changedTouches[0]);
     })
+/** 
     map.addEventListener('touchstart', e =>{
         shouldMove=true;
         console.log('start');
@@ -93,7 +94,7 @@ const mapMovement = (() =>{
         shouldMove=false;
         console.log('end');
     })
-    */
+*/
    
 
 })();
