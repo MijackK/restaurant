@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    clean: true,
   },
   module: {
     rules: [
@@ -21,8 +22,6 @@ module.exports = {
   },
   devServer:{
       static:'./dist',
-      headers: {
-        'Access-Control-Allow-Origin': 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
-      },
+   
   }
 };

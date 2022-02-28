@@ -26,7 +26,7 @@ const navFactory =  (() =>{
     humberger.innerHTML =`<i class="fas fa-bars"></i>`;
     Header.appendChild(humberger);
     themeSlider.innerHTML = `<div class="theme-circle"></div>`;
-    gitHub.innerHTML =(`<span> Create by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`);
+    gitHub.innerHTML =(`<span> Created by  <a href="https://github.com/MijackK/restuarant/tree/main/src"><i class="fab fa-github"></i></a></span>`);
 
     // set attributes
     //add classes
