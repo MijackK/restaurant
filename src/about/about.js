@@ -55,8 +55,8 @@ const mapMovement = (() =>{
         offsetX = [0,1,2,3,-1,-2,-3].map(x => x+coordinates.x);// prevent movement from slight offsets
         offsetY = [0,1,2,3,-1,-2,-3].map(y => y+coordinates.y);// prevent movement from slight offsets
        
-        movement.x = offsetX.includes(e.clientX) ? 0: e.clientX > coordinates.x ? 16:-16;
-        movement.y =  offsetY.includes(e.clientY) ? 0:e.clientY > coordinates.y ? 16:-16;
+        movement.x = offsetX.includes(e.clientX) ? 0: e.clientX > coordinates.x ? 12:-12;
+        movement.y =  offsetY.includes(e.clientY) ? 0:e.clientY > coordinates.y ? 12:-12;
         mapPosition.x = mapPosition.x + movement.x;
         mapPosition.y = mapPosition.y + movement.y;
        map.style.backgroundPosition = `${mapPosition.x}px ${mapPosition.y}px`;
@@ -85,7 +85,7 @@ const mapMovement = (() =>{
         e.preventDefault();
         startMovement(e.changedTouches[0]);
     })
-/** 
+
     map.addEventListener('touchstart', e =>{
         shouldMove=true;
         console.log('start');
@@ -94,7 +94,7 @@ const mapMovement = (() =>{
         shouldMove=false;
         console.log('end');
     })
-*/
+
    
 
 })();
