@@ -193,10 +193,14 @@
         text-align: center;
     }
     .img-visible{
-        background-size: 96vw 576px;
+        background-size: 96vw 376px;
         margin-left:5px;
+        height: 376px;
     }
     .img-invisible{
-        background-size: 100vw 623px;
+        background-size: 100vw 423px;
+        width:100px;
+        height:100px;
+     
     }
 }
