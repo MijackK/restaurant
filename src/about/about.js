@@ -91,7 +91,6 @@ const mapMovement = (() =>{
       
     })
     map.addEventListener('touchmove', e =>{
-        e.preventDefault();
         startMovement(e.changedTouches[0]);
      
     })
