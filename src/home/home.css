@@ -184,9 +184,11 @@
     }
     .third-section{
         width: 100vw;
+        margin-top: 10px;
     }
     .third-section >p{
         width: 90vw;
+        
     }
     .third-section >span{ 
         font-size: 2.3rem;
