@@ -4,7 +4,7 @@
 
 
 <ul>
-  <li>lght/day mode with images changing to match the selection </li>
+  <li>Light/Dark modes, images change to match the selection </li>
   <li>Interactive Menu </li>
   <li> Explore the map of lucis </li>
   <li> Mobile Responsive </li>
