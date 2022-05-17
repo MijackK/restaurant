@@ -1,10 +1,5 @@
 import "./home.css";
 import myLogo from "./logo2.png";
-//let position =[];
-//document.querySelector('body').addEventListener('click',e => {
-// position.push({x:e.clientX,y:e.clientY});
-//console.log(position);
-//})
 
 const Home = document.createElement("div");
 const constructHome = (() => {
@@ -74,11 +69,6 @@ const constructHome = (() => {
   paragraph1.textContent = `A Stunning seaside getaway along the Vannath Coast in southern Leide. Known not only for its world-class spa, but also for the exquisite seafood dishes crafted by Mother of Pearl's chef de cuisine, Coctura Arlund.`;
   paragraph2.textContent = ` With the sea right at our door we offer only the freshest sea food and if your feeling up to it, we'll let you catch you're own fish doubling the experience`;
 
-  //add/edit attribute
-  //galdinVideo.src= localStorage.theme == 'light'?'https://gta5mod.net/wp-content/uploads/2020/06/Final-Fantasy-XV-Galdin-Quay.jpg':'https://i.ytimg.com/vi/FQcPlk5APAs/maxresdefault.jpg';
-  //imageInvisible.style.backgroundImage = localStorage.theme == 'light' ? `url('https://i.imgur.com/z3PX2uk.png')` :  `url('https://i.imgur.com/gkeuUxp.jpg')`;
-  //imageVisible.style.backgroundImage = localStorage.theme == 'light' ?`url('https://i.imgur.com/enudYqV.jpg')` :  `url('https://i.imgur.com/bnLWCgA.jpg')`;
-
   logo.src = myLogo;
 
   const animate = () => {
@@ -145,8 +135,7 @@ const constructHome = (() => {
       let outOfBoundsBottom = visible.offsetTop + coord.height;
       let radius = dimensions.width / 2;
       invisible.style.opacity = 1;
-      //console.log(`screenX${e.screenX}  clinetX${e.clientX} pageX:${e.pageX} `);
-      //console.log(`imgX:${coord.x} ${coord.left}  imgY: ${coord.y} ${visible.offsetTop}  scrY:${e.screenY} pageY:${e.pageY} cliY:${e.clientY} `);
+
       if (
         coord.left > e.pageX ||
         e.pageX > outOfBoundsRight ||
