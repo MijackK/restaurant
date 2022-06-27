@@ -57,6 +57,7 @@
 .logo2 {
   width: min(450px, 100%);
   height: auto;
+  min-height: 30vh;
 }
 .second-section > span:nth-child(2) {
   font-size: 7rem;
