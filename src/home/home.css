@@ -43,7 +43,7 @@
 .galdin-video {
   width: 60%;
   height: auto;
-  min-height: 80vh;
+  min-height: 75vh;
   margin-left: auto;
   border-style: none;
   filter: contrast(120%);
@@ -149,6 +149,9 @@
   }
   .img-invisible {
     background-size: 103vw 623px;
+  }
+  .galdin-video {
+    min-height: 50vh;
   }
 }
 
