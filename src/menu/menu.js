@@ -192,7 +192,8 @@ const constructMenu = (() => {
   };
 
   const addItems = (() => {
-    for (let i = 0; i < 13; i++) {
+    const menuSlots = 13;
+    for (let i = 0; i < menuSlots; i++) {
       Item.textContent = "";
       Item.style.backgroundImage = "";
       Item.id = "";
