@@ -36,7 +36,7 @@
 .about-container {
   min-height: calc(100vh - 50px);
 }
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 900px) {
   .about-wrapper {
     flex-direction: column;
     margin-top: 5px;
